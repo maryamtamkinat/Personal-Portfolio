@@ -1,7 +1,7 @@
 "use client";
 
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 import React, { useEffect, useRef, useState } from "react";
 
 const technicalSkills = [
@@ -45,12 +45,11 @@ const CircularBar = ({ name, percentage }: { name: string; percentage: number })
   const strokeDashoffset = circumference - (progress / 100) * circumference;
 
   useEffect(() => {
-        AOS.init({
-          duration: 1000,
-          once: true, 
-        });
-      }, []);
-  
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   return (
     <div className="flex flex-col items-center mt-5">
@@ -101,6 +100,8 @@ const CombinedSkills = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const currentRef = sectionRef.current; // ✅ fix here
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -110,13 +111,13 @@ const CombinedSkills = () => {
       { threshold: 0.3 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -131,7 +132,9 @@ const CombinedSkills = () => {
         {/* Technical Skills */}
         <div>
           <h2 className="text-3xl text-center font-bold mb-3">Technical Skills</h2>
-          <p className="mb-6 text-center text-gray-700">Technologies I'm confident working with:</p>
+          <p className="mb-6 text-center text-gray-700">
+            Technologies I&apos;m confident working with:
+          </p>
           <div className="space-y-6">
             {technicalSkills.map((skill) => (
               <div key={skill.name}>
@@ -153,7 +156,9 @@ const CombinedSkills = () => {
         {/* Soft Skills */}
         <div data-aos="fade-left">
           <h2 className="text-3xl text-center font-bold mb-3">Soft Skills</h2>
-          <p className="mb-6 text-center text-gray-700">Personal strengths that support my teamwork and growth.</p>
+          <p className="mb-6 text-center text-gray-700">
+            Personal strengths that support my teamwork and growth.
+          </p>
           <div className="grid grid-cols-2">
             {softSkills.map((skill, idx) => (
               <CircularBar key={idx} percentage={skill.level} name={skill.name} />
@@ -166,4 +171,3 @@ const CombinedSkills = () => {
 };
 
 export default CombinedSkills;
-

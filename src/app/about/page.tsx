@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import { useEffect } from 'react';
 
+/* eslint-disable react/no-unescaped-entities */
 
 export default function About() {
   useEffect(() => {

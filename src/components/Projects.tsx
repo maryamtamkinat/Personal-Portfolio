@@ -54,8 +54,9 @@ export default function Projects() {
     <div className='mt-32' data-aos='fade-up'>
       <h1 className='text-center text-4xl md:text-5xl font-bold mb-28'>My Projects</h1>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 my-10'>
-        {Projects.map((project, key) => (
+        {Projects.map((project) => (
           <div key={project.name} className='p-4 border bg-[#111111] border-gray-700 hover:border-gray-500 transition-all duration-200 rounded-lg shadow-md m-2'>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={project.image} className='h-[150px] w-full object-cover' alt={project.name} />
             <span className='flex items-center justify-between mt-3'>
                 <h2 className='text-2xl font-bold'>

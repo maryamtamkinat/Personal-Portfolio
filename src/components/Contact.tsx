@@ -10,6 +10,8 @@ import { IoLogoGithub } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 
+/* eslint-disable react/no-unescaped-entities */
+
 function Page() {
   useEffect(() => {
         AOS.init({
