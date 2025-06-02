@@ -49,7 +49,7 @@ function Page() {
 
   return (
     <section id="contact" className='mt-32 mb-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>
-      <h1 className='font-bold text-4xl md:text-5xl text-center mb-20'>Get In Touch</h1>
+      <h1 className='font-bold text-4xl md:text-5xl text-center mb-14 lg:mb-20'>Get In Touch</h1>
 
       <div className='flex flex-col lg:flex-row justify-between gap-10'>
         {/* Left Side */}
@@ -64,7 +64,7 @@ function Page() {
             <CiMail size={20}/> maryamtamkinat@gmail.com
           </p>
 
-          <div className="flex gap-5 mt-2">
+          <div className="flex gap-5 mt-2 justify-center lg:justify-start">
             <a href="https://github.com/maryamtamkinat" target="_blank" className="p-2 rounded-full border-2 border-gray-400 hover:border-pink-500 transition-colors">
               <IoLogoGithub size={18} />
             </a>

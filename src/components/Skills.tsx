@@ -1,5 +1,9 @@
+'use client'
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiTypescript, SiTailwindcss, SiNextdotjs, SiPython } from "react-icons/si";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import { useEffect } from 'react';
 
 const skills = [
   { Icon: FaHtml5, color: "text-orange-500" },
@@ -14,8 +18,16 @@ const skills = [
 ];
 
 export default function Skills() {
+  
+  useEffect(() => {
+          AOS.init({
+            duration: 2000,
+            once: true, 
+          });
+        }, []);
+
   return (
-    <section className="w-full mt-32">
+    <section className="w-full mt-32"  data-aos="fade-up">
       <h1 className="text-center text-4xl md:text-5xl font-bold mb-28">Skills</h1>
 
       <div className="relative w-full overflow-hidden group">

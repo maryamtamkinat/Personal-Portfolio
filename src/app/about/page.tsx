@@ -15,7 +15,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className='mt-32 mb-18 px-[20%]' data-aos="fade-left">
+    <div className='mt-32 mb-18 px-[10%] lg:px-[20%]' data-aos="fade-left">
       <h1 className='text-3xl text-center font-bold'>Want To Know More About Me ?</h1>
       <p className='text-md text-gray-400 text-center mb-10'>Here's my journey — from discovering my passion to building real-world projects.</p>
       <p className='text-md text-gray-300 text-center'>

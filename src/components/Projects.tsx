@@ -1,8 +1,19 @@
 'use client';
 import React from 'react';
 import { LuSquareArrowOutUpRight } from "react-icons/lu";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import { useEffect } from 'react';
 
 export default function Projects() {
+  
+  useEffect(() => {
+          AOS.init({
+            duration: 1000,
+            once: true, 
+          });
+        }, []);
+
   const Projects = [
     {
       name: 'E-commerce Website',

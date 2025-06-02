@@ -1,10 +1,11 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
 
-
+html,
 body{
   background: #0c0c0c;
   color:azure;
+   overflow-x: hidden;
 }
 
 .container{
@@ -12,5 +13,6 @@ body{
 }
 
 .font-roboto {
-  font-family: 'Inter', sans-serif;
+ 
+  font-family: 'Nunito', 'sans-serif';
 }
